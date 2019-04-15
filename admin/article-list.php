@@ -18,13 +18,17 @@ if (isset($_GET['article_id']) && isset($_GET['action']) && $_GET['action'] == '
     $resultImg = $queryDel->fetch();
 
 
+
     $query = $db->prepare('DELETE FROM article WHERE id = ?');
     $result = $query->execute([
         $_GET['article_id']
     ]);
 
     $way = '../img/article/';
-    unlink($way . $resultImg['image']);
+    if ($resultImg[0] != null) {
+        unlink($way . $resultImg['image']);
+    }
+
 
     $query = $db->prepare('DELETE FROM article_category WHERE article_id = ?');
     $resultCategory = $query->execute([
