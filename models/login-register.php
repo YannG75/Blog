@@ -23,6 +23,7 @@ function login(){
             $loginError = "Mauvais identifiants";
         }
     }
+    return $loginError;
 }
 
 function register(){
@@ -64,4 +65,5 @@ function register(){
         $_SESSION['user']['firstname'] = $_POST['firstname'];
         $_SESSION['user']['id'] = $lastInsertedUserId;
     }
+    return $registerError;
 }

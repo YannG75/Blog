@@ -1,7 +1,7 @@
 <?php
 require_once('./models/login-register.php');
-if(isset($_POST['login'])) login();
-if(isset($_POST['register'])) register();
+if(isset($_POST['login'])) $loginError = login();
+if(isset($_POST['register'])) $registerError = register();
 if(isset($_SESSION['user'])){
     header('location:index.php');
     exit;

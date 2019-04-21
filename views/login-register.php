@@ -30,7 +30,7 @@
             <div class="tab-content">
                 <div class="tab-pane container-fluid <?php if(!isset($_POST['register'])): ?>active<?php endif; ?>" id="login" role="tabpanel">
 
-                    <form action="login-register.php" method="post" class="p-4 row flex-column">
+                    <form action="index.php?page=login-register" method="post" class="p-4 row flex-column">
 
                         <h4 class="pb-4 col-sm-8 offset-sm-2">Connexion</h4>
 
@@ -57,7 +57,7 @@
                 </div>
                 <div class="tab-pane container-fluid <?php if(isset($_POST['register'])): ?>active<?php endif; ?>" id="register" role="tabpanel">
 
-                    <form action="login-register.php" method="post" class="p-4 row flex-column">
+                    <form action="index.php?page=login-register" method="post" class="p-4 row flex-column">
 
                         <h4 class="pb-4 col-sm-8 offset-sm-2">Inscription</h4>
 
